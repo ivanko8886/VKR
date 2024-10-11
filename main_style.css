@@ -1,5 +1,4 @@
 /* Global styles */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,8 +34,15 @@ a:hover {
   color: #fff;
   padding: 10px;
   display: flex;
+  flex-direction: column;
+}
+
+.top-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
 }
 
 .logo {
@@ -46,6 +52,33 @@ a:hover {
 .logo img {
   width: 40px;
   height: 40px;
+}
+
+.special-functions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-functions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.special-functions li {
+  margin-right: 20px;
+}
+
+.special-functions a {
+  color: #fff;
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .navigation {
