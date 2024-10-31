@@ -1,11 +1,18 @@
-
-# подключаем urlopen из модуля urllib
-from urllib.request import urlopen
-# подключаем библиотеку BeautifulSoup
 from bs4 import BeautifulSoup
-# получаем исходный код страницы
-inner_html_code = str(urlopen('https://www.cian.ru/').read(),'utf-8')
-# отправляем исходный код страницы на обработку в библиотеку
-inner_soup = BeautifulSoup(inner_html_code, "html.parser")
-# выводим содержимое страницы
-print(inner_soup.get_text())
+import requests
+
+# URL страницы, которую мы хотим парсить
+url = 'https://kaluga.cian.ru/snyat-komnatu/'
+
+# Получаем содержимое страницы
+res = requests.get(url)
+
+# Создаем объект BeautifulSoup для парсинга HTML
+soup = BeautifulSoup(res.text, "lxml")
+
+# Находим все элементы с заданным классом с помощью CSS-селекторов
+data = soup.select("._93444fe79c--content--lXy9G")
+
+# Выводим каждый найденный элемент
+for item in data:
+    print(item.text)

@@ -6,16 +6,16 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Увеличен размер шрифта для лучшей читабельности */
+  line-height: 1.8; /* Увеличена высота строки для более комфортного чтения */
+  color: #444; /* Немного светлее цвет текста */
+  background-color: #f1f1f1; /* Изменен фон на более светлый и нейтральный */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   color: #06965c;
-  margin-bottom: 10px;
 }
 
 a {
@@ -30,9 +30,8 @@ a:hover {
 /* Header styles */
 
 #head {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+  background-color: #f1f0ec;
+  color: #000;
   display: flex;
   flex-direction: column;
 }
@@ -41,18 +40,17 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #444;
 }
 
-.logo {
-  margin-right: 20px;
-}
 
 .logo img {
-  width: 40px;
-  height: 40px;
+  width: 67px;
+  height: 67px;
+  vertical-align: middle; /* выравнивание по центру */
 }
+
+
+
 
 .special-functions {
   display: flex;
@@ -71,14 +69,13 @@ a:hover {
 }
 
 .special-functions a {
-  color: #fff;
+  color: #000;
 }
 
 .bottom-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
 }
 
 .navigation {
@@ -94,43 +91,17 @@ a:hover {
   display: flex;
 }
 
-.navigation li {
-  margin-right: 20px;
-}
+
 
 .navigation a {
-  color: #fff;
-}
-
-.search-button {
-  margin-left: 20px;
-}
-
-.search-button input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
-}
-
-.search-button button {
-  background-color: #337ab7;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.auth-buttons {
-  margin-left: 20px;
+  color: #000;
 }
 
 .auth-buttons button {
   background-color: #337ab7;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  
   border-radius: 5px;
   cursor: pointer;
 }
@@ -267,7 +238,7 @@ a:hover {
 }
 
 .social-links {
-  margin -right: 20px;
+  margin-right: 20px;
 }
 
 .social-links a {
