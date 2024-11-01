@@ -31,7 +31,6 @@
 }
 
 #head li a:hover {
-  background: rgb(250, 235, 235); /* Цвет фона при наведении */
   color: #FF5733; /* Цвет текста при наведении (можно изменить на любой другой) */
 }
 
@@ -44,7 +43,8 @@
   grid-column: span 1000;
   display: none;
   height: fit-content;
-  background: linear-gradient(to right, rgb(245, 245, 245), rgb(245, 225, 160));
+  background: #d5d4cf;
+  padding-left: 12rem;
 }
 
 #head li:hover .dropdown-content {

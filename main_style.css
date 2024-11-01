@@ -34,6 +34,9 @@ a:hover {
   color: #000;
   display: flex;
   flex-direction: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-bottom: 2px solid #000; /* Более толстая линия с цветом, соответствующим вашей цветовой схеме */
 }
 
 .top-header {

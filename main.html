@@ -5,7 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="main_style.css" type="text/css">
     <link rel="stylesheet" href="up_style.css" type="text/css">
-    <title>ДомоТека</title>
+    <link rel="stylesheet" href="centre.css" type="text/css">
+    <link rel="stylesheet" href="menu_panel.css" type="text/css">
+
+    <title>ДомоТека - база недвижимости в России | Продажа, аренда квартир и другой недвижимости</title>
     
     </style>
 </head>
@@ -14,14 +17,18 @@
         <div class="top-header">
             <div class="logo">
                 <a href="main.html">
-                <img  src="домотека.png" alt="Логотип проекта">
+                <img  style="margin-left: 7.5px;" src="домотека.png" alt="Логотип проекта">
                 </a>
             </div>
             <div class="special-functions">
                 <ul>
+                    <li><a href="#">Добавить</a></li> 
                     <li><a href="#">Сравнить</a></li> 
                     <li><a href="#">Избранное</a></li>
                     <li><a href="#">Вход</a></li>
+                <!--заменить слова верхней части шапки на значки 
+                + сделать сплывающее окно помощник при наведении
+                за исключением входа\регистрции\личного кабинета кабинета -->
                 </ul>
             </div>
         </div>
@@ -48,24 +55,66 @@
                         </div>
                     </li>
                     <li class="dropdown">
+                        <a href="#commerc">Коммерческая</a>
+                        <div class="dropdown-content">
+                            <a href="#projects">Проекты</a>
+                            <a href="#contractor">Подрядчик</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#new_estates">Новостройки</a>
+                        <div class="dropdown-content">
+                            <a href="#projects">Проекты</a>
+                            <a href="#contractor">Подрядчик</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
                         <a href="#build">Строительство</a>
                         <div class="dropdown-content">
                             <a href="#projects">Проекты</a>
                             <a href="#contractor">Подрядчик</a>
                         </div>
                     </li>
-                    <li><a href="#commerc">Коммерция</a></li>
                 </ul>
             </nav>
         </div>
     </div>
-
+    
     <div id="centre">
-        
+        <!-- Добавьте этот код внутрь div id="centre" -->
+<div class="search-panel">
+    <div class="main-buttons">
+        <button class="menu-btn" data-target="buy-panel">Купить</button>
+        <button class="menu-btn" data-target="rent-panel">Снять</button>
+        <button class="menu-btn" data-target="commercial-panel">Коммерческая</button>
     </div>
+    
+    <div class="sub-panel" id="buy-panel">
+        <div class="filter-section">
+            <div class="property-type">
+                <label><input type="radio" name="property" value="apartment"> Квартира</label>
+                <label><input type="radio" name="property" value="house"> Дом</label>
+                <label><input type="radio" name="property" value="room"> Комната</label>
+            </div>
+            <select class="rooms-select">
+                <option value="">Количество комнат</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+            </select>
+            <button class="search-btn">Найти</button>
+        </div>
+    </div>
+    <!-- Аналогичные панели для других кнопок -->
+</div>
+    
+    </div>
+
 
     <div id="down">
        
     </div>
+    <script src="menu.js"></script>
 </body>
 </html>
