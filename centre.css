@@ -1,16 +1,24 @@
 #centre {
-    background: #000 url("banner_1") 
-     no-repeat center   ;
-    height:600px;
-    background-color: #000;
+    position: relative;
+    height: 550px;
+    overflow: hidden;
 }
-
+#centre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("banner1.jfif") no-repeat center -250px ; /* Добавляем отрицательное значение */
+    background-size: cover;
+    z-index: -1;
+}
 #banner {
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-width: 1440px;
     max-height: 800px;
-
 
 }

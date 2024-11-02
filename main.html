@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link  rel="icon" type="image/ico" href="favicon.png"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="main_style.css" type="text/css">
     <link rel="stylesheet" href="up_style.css" type="text/css">
     <link rel="stylesheet" href="centre.css" type="text/css">
     <link rel="stylesheet" href="menu_panel.css" type="text/css">
+    <link rel="stylesheet" href="main-title.css" type="text/css">
+
+    <link rel="stylesheet" href="modal.css">
+    <script src="modal.js" defer></script>
+    <script src="menu.js"></script>
+
+
 
     <title>ДомоТека - база недвижимости в России | Продажа, аренда квартир и другой недвижимости</title>
     
     </style>
 </head>
 <body>  
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Вход в систему</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="login-button">Войти</button>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <div class="register-link">
+                    <p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
     <div id="head">
         <div class="top-header">
             <div class="logo">
@@ -22,11 +51,11 @@
             </div>
             <div class="special-functions">
                 <ul>
-                    <li><a href="#">Добавить</a></li> 
+                    <li><a href="#">Поисккарте</a></li> 
+                    <li><a href="#">Поисксайту</a></li> 
                     <li><a href="#">Сравнить</a></li> 
                     <li><a href="#">Избранное</a></li>
-                    <li><a href="#">Вход</a></li>
-                <!--заменить слова верхней части шапки на значки 
+                    <li><a href="#" id="login-link">Войти</a></li>                <!--заменить слова верхней части шапки на значки 
                 + сделать сплывающее окно помощник при наведении
                 за исключением входа\регистрции\личного кабинета кабинета -->
                 </ul>
@@ -80,41 +109,27 @@
         </div>
     </div>
     
-    <div id="centre">
-        <!-- Добавьте этот код внутрь div id="centre" -->
-<div class="search-panel">
-    <div class="main-buttons">
-        <button class="menu-btn" data-target="buy-panel">Купить</button>
-        <button class="menu-btn" data-target="rent-panel">Снять</button>
-        <button class="menu-btn" data-target="commercial-panel">Коммерческая</button>
-    </div>
-    
-    <div class="sub-panel" id="buy-panel">
-        <div class="filter-section">
-            <div class="property-type">
-                <label><input type="radio" name="property" value="apartment"> Квартира</label>
-                <label><input type="radio" name="property" value="house"> Дом</label>
-                <label><input type="radio" name="property" value="room"> Комната</label>
-            </div>
-            <select class="rooms-select">
-                <option value="">Количество комнат</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4+">4+</option>
-            </select>
-            <button class="search-btn">Найти</button>
+    <!-- В main.html -->
+<div id="centre">
+    <a class="main-title">ДомоТека — ваш ключ к идеальному дому</a>    
+    <div class="search-container">
+        <div class="menu-tabs">
+            <button class="tab-button active" data-panel="buy">Купить</button>
+            <button class="tab-button" data-panel="rent">Снять</button>
+            <button class="tab-button" data-panel="rent_day">Посуточно</button>
+            <button class="tab-button" data-panel="build">Построить</button>
+            <button class="tab-button" data-panel="commers">Подбор риэлтора</button>
+        </div>
+        <div class="search-content" id="searchContent">
+            <!-- Содержимое поиска будет здесь -->
         </div>
     </div>
-    <!-- Аналогичные панели для других кнопок -->
 </div>
-    
-    </div>
 
 
     <div id="down">
        
     </div>
-    <script src="menu.js"></script>
+
 </body>
 </html>

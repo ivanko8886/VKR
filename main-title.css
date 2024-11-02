@@ -1,0 +1,58 @@
+/* Добавьте в ваш CSS файл */
+.main-title {
+    display: block;
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Аристократический шрифт */
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin:  auto;
+    width: 80%;
+    max-width: 1200px;
+    background: linear-gradient(120deg, 
+        rgba(84, 158, 255, 0.3),
+        rgba(73, 255, 112, 0.3),
+        rgba(143, 87, 255, 0.3));
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 10px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    position: relative;
+    overflow: hidden;
+    animation: titleFade 3.5s ease-in-out;
+    
+}
+.main-title::before {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shine 10s infinite;
+}
+
+@keyframes titleFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes shine {
+    to {
+        left: 100%;
+    }
+}

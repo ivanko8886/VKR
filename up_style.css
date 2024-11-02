@@ -20,33 +20,97 @@
 }
 
 #head li:hover > #head a {
-  background: #ede6e6; /* Цвет фона при наведении на элемент списка */
+  background: #ffffff; /* Цвет фона при наведении на элемент списка */
 }
 
 #head li a {
   text-decoration: none; /* Убираем подчеркивание */
   padding: 17px 15px; /* Отступы для ссылок */
   display: block; /* Делаем ссылки блочными элементами */
-  transition: background 0.6s ease, color 0.6s ease; /* Плавный переход для фона и цвета текста */
+  transition: background 0.6s cubic-bezier(1, -0.28, 0, 1.33), color 0.3s cubic-bezier(1, -0.33, 0, 1.29); /* Плавный переход для фона и цвета текста */
+  color: #000
+  
 }
 
 #head li a:hover {
-  color: #FF5733; /* Цвет текста при наведении (можно изменить на любой другой) */
+  color: #057f4d; /* Цвет текста при наведении (можно изменить на любой другой) */
 }
 
 #head .dropdown-content {
   position: absolute;
   left: 0;
-  top: 130px;
+  top: 134px;
   width: 100%;
   grid-row: 2;
   grid-column: span 1000;
   display: none;
   height: fit-content;
-  background: #d5d4cf;
+  background: #ffffff;
   padding-left: 12rem;
+  z-index: 1000; /* Добавьте эту строку */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Добавьте тень для визуального отделения */
+}
+
+#head {
+  position: relative; /* Добавьте эту строку */
+  z-index: 1001; /* Добавьте эту строку, значение должно быть больше, чем у .dropdown-content */
+}
+
+#centre {
+  position: relative; /* Добавьте эту строку */
+  z-index: 1; /* Добавьте эту строку */
 }
 
 #head li:hover .dropdown-content {
   display: block;
 }
+/* Для всех ссылок в шапке */
+#head a {
+  transition: all 0.1s ease;
+  position: relative;
+  display: inline-block;
+}
+
+#head a:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#head a:active {
+  transform: translateY(0px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Специально для элементов выпадающего меню */
+.dropdown-content a {
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Для кнопок в поисковой панели */
+.tab-button {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  /* Здесь можно добавить дополнительные стили для активной кнопки */
+}
+
